@@ -24,7 +24,7 @@ export class Home extends React.Component{
 
       const postsAndPhotos = await loadPost();
       this.setState({
-        posts: postsAndPhotos.slice(0, 2),
+        posts: postsAndPhotos.slice(page, postPerPage),
          allPosts: postsAndPhotos,
         });
     }
